@@ -8,7 +8,7 @@
    ```
 4. `pip install --upgrade pip`
 
-5. New terminal --> cd .. --> `django-admin startproject Job_Hub_Backend .` --> and move the `manage.py` file to `Job_Hub_Backend` folder.
+5. Now run this command --> `django-admin startproject <project-name>` --> cd <project-name>
 
 6. In setting.py apply this step:
 
