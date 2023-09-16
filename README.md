@@ -272,3 +272,19 @@ admin.site.register(Job)
   d. urls.py theke kun api te hit korle views er kun data gula dekhabe seta define korte hoy.
   e. apps er urls.py ta project er urls.py te add korte hobe.
 ```
+
+20. For creating a custom auth system or registration system:
+
+    a. Create new app or module and add app name in `INSTALLED_APPS` array under settings.py file.
+
+    ```
+      python manage.py startapp authuser
+    ```
+
+    ```
+    INSTALLED_APPS = [
+    'authuser',
+    ]
+
+    AUTH_USER_MODEL = 'authuser.User'
+    ```
