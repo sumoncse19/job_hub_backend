@@ -62,7 +62,21 @@ class CreateJobsView(APIView):
       job = form.save(commit=False)
       job.created_by = request.user
       job.save()
-      
-      return Response({'status': 'success'})
+
+      return Response({'status': 'Created successfully!'})
     else:
       return Response({'status': 'errors', 'error': form.errors})
+
+  def put(self, request, pk):
+    job = Job.objects.get(pk=pk, created_by=request.user)
+    form = JobForm(request.data, instance=job)
+    form.save()
+
+    return Response({'status': 'Updated successfully!'})
+
+  def delete(self, request, pk):
+    job = Job.objects.get(pk=pk, created_by=request.user)
+    job.delete()
+
+    return Response({'status': 'Deleted successfully!'})
+

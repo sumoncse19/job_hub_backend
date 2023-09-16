@@ -9,4 +9,6 @@ urlpatterns = [
     path('create-jobs/', views.CreateJobsView.as_view()),
     path('newest/', views.NewestJobsList.as_view()),
     path('<int:pk>/', views.NewestJobDetailView.as_view()),
+    path('update-job/<int:pk>/', views.CreateJobsView.as_view()),
+    path('delete-job/<int:pk>/', views.CreateJobsView.as_view()),
 ]
